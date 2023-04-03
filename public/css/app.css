@@ -1,0 +1,160 @@
+
+
+
+/* #taula {
+    height: 359px !important;
+    overflow: auto;
+    width: 600px;
+}
+
+/* @media screen and (max-width: 600px) {
+    table {
+        width:100%;
+    }
+    thead {
+        display: none;
+    }
+    tr:nth-of-type(2n) {
+        background-color: inherit;
+    }
+    tr td:first-child {
+        background: #f0f0f0;
+        font-weight:bold;
+        font-size:1.3em;
+    }
+    tbody td {
+        display: block;
+        text-align:center;
+    }
+    tbody td:before {
+        content: attr(data-th);
+        display: block;
+        text-align:center;
+    }
+} */
+
+@media screen and (max-width: 320px) {
+    table {
+        display: block;
+        overflow-x: auto;
+
+    }
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+}
+
+.container-fluid>* {
+    padding: 1px;
+}
+
+.navbar-nav>li>a,
+.navbar-brand {
+    padding-top: 1px !important;
+    padding-bottom: 0 !important;
+    height: 10px;
+    /* aqui escoges el alto que necesites */
+}
+
+.navbar {
+    min-height: 10px !important;
+    /* aqui escoges el alto que necesites */
+}
+
+.card-deck {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    flex: 1 0 0%;
+    flex-direction: column;
+    margin-bottom: 0px;
+    /*altura del card de la parte de abajo */
+    margin-right: -20px;
+    /*margin para parte derecha del card */
+    margin-left: 0px;
+    /* margin para la parte izquierda del card */
+}
+
+#seleccionGraficas {
+    display: flex;
+    flex: 1 0 0%;
+    flex-direction: column;
+    margin-bottom: 0px;
+    /*altura del card de la parte de abajo */
+    margin-right: -20px;
+    /*margin para parte derecha del card */
+    margin-left: 5px;
+    /* margin para la parte izquierda del card */
+    margin-top: 5px;
+}
+
+.c3-axis-y text {
+    font-size: 13px;
+    /* change the size of the fonts */
+}
+
+.c3-axis-x text {
+    font-size: 13px;
+    /* change the size of the fonts */
+}
+
+
+
+
+h3 {
+    text-align: center;
+}
+
+#calendar {
+    margin-top: 40px;
+}
+
+
+/* modificando el color de las lineas verticales en las graficas */
+
+.c3-xgrid-line.black line {
+    stroke: gray;
+    /*  color de la linea */
+    stroke-dasharray: 5, 5;
+    /*  punteo de la linea */
+}
+
+
+/* Para el calendar del div que no se utilizo */
+.event a {
+    background-color: #5FBA7D !important;
+    color: #ffffff !important;
+}
+
+
+/* Metodos para el ordenamiento de la tabla */
+
+table tr th {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.sorting {
+    background-color: #D4D4D4;
+}
+
+.asc:after {
+    content: ' ↑';
+}
+
+.desc:after {
+    content: " ↓";
+}
