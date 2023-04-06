@@ -329,7 +329,9 @@
                                     'equipo': tr.parentNode.children[4].textContent };  --}}
 
             var filaseleccionada = tr.parentNode.children[0].textContent + "=" + tr.parentNode.children[6]
-                .textContent + "=" + tr.parentNode.children[1].textContent + "=" + tr.parentNode.children[8]
+                .textContent + "=" + tr.parentNode.children[1]
+
+                .textContent + "=" + tr.parentNode.children[8]
                 .textContent;
 
             //console.log(filaseleccionada);
