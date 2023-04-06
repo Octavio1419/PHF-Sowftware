@@ -20,5 +20,9 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call(EjemploGraficasSeeder::class);
+
+        //LLAMANDO LOS SEEDEER PARA QUE LOS LLEVE A LA BASE D E DATOS
+        $this->call(UsuariosSeeder::class);
+        $this->call(RolesSeeder::class);
     }
 }

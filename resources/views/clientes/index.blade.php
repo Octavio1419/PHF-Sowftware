@@ -30,13 +30,10 @@
                         </div>
                     </div>
                     <br>
-
                     {{--  <input type="text" id="datepicker">  --}}
                     <button id="btnconsultar"
                         class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2">Consultar
                         datos </button>
-
-
                 </div>
             </div>
         </div>

@@ -13,16 +13,15 @@
     <link rel="stylesheet" href="{{ asset('css/c3.css') }}">
     <link rel="stylesheet" href="{{ asset('css/all.css') }}">
 
-
     {{--  Importando js de C3 para las graficas y Ajax para la consulta de la tabla index  --}}
     <script src="{{ URL::asset('js/c3.js') }}"></script>
     <script src="{{ URL::asset('js/d3-v5-min.js') }}"></script>
     <script src="{{ URL::asset('build/assets/app.js') }}"></script>
     <script src="{{ URL::asset('js/ajax.js') }}"></script>
     <script src="{{ URL::asset('js/all.js') }}"></script>
+    <script src="{{ asset('js/edit.js') }}"></script>
 
     {{--  -----------------------------------------------------------------------  --}}
-
 
 
 </head>
@@ -42,6 +41,7 @@
                         <li class="sidebar-header">
                             Principal
                         </li>
+
 
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="/graficas">
@@ -68,7 +68,52 @@
                                     class="align-middle">Buttons</span>
                             </a>
                         </li>  --}}
+                        {{--
+                        MENU PARA EL USUARIO ADMINISTRADOR --}}
+                        @can('EsAdmin')
+                            <li class="sidebar-header">
+                                Administrador
+                            </li>
+                            </li>
 
+                            <!-- Default dropend button -->
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="admin">
+                                    <i class="fa fa-area-chart"></i> <span class="align-middle">
+                                        CIPS 1 </span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="/graficas">
+                                    <i class="fa fa-area-chart"></i> <span class="align-middle">
+                                        CIPS 2 </span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="/graficas">
+                                    <i class="fa fa-area-chart"></i> <span class="align-middle">
+                                        Etiquetas </span>
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="/graficas">
+                                    <i class="fa fa-area-chart"></i> <span class="align-middle">
+                                        Marcas </span>
+                                </a>
+                            </li>
+
+                            <li class="sidebar-header">
+                                Otros
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="">
+                                    <i class="bi bi-person-fill-gear"></i> <span class="align-middle">Administrativo</span>
+                                </a>
+                            </li>
+                        @endcan
 
                     </ul>
 
